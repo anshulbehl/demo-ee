@@ -15,7 +15,6 @@
 - name: Configure Gitea host
   hosts: gitea
   gather_facts: false
-  become: true
   tags:
     - gitea-config
 
