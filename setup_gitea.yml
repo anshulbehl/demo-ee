@@ -32,13 +32,6 @@
         path: /tmp/setup-scripts/devops-controller
         state: directory
 
-    - name: Download lab content to controller tmp directory
-      ansible.builtin.subversion:
-        repo: "{{ download_url }}"
-        dest: /tmp/setup-scripts/devops-controller
-        export: true
-        force: true
-
     - name: Create repo users
       ansible.builtin.command: "{{ item }}"
       become_user: git
