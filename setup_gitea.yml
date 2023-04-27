@@ -32,7 +32,7 @@
         path: /tmp/setup-scripts/devops-controller
         state: directory
 
-    - name: Create repo users
+    - name: Create student and jenkins repo users
       ansible.builtin.command: "{{ item }}"
       become_user: git
       register: __output
